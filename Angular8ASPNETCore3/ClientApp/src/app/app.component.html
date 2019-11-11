@@ -1,0 +1,28 @@
+<!--<h2>{{ pageHeader }}</h2>-->
+<!--<app-employee></app-employee>-->
+<!--<app-employee-list></app-employee-list>-->
+
+
+<!-- Implementation of Life cycle hooks onChanges -->
+<!--<div>
+  Your text : <input type="text" name="name" [(ngModel)]="userText" />
+</div>
+<br /><br />
+<app-simple [simpleInput]="userText"></app-simple>-->
+
+
+
+<div style="padding:5px">
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active">
+      <a routerLink="home">Home</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="employees">Employees</a>
+    </li>
+  </ul>
+  <br />
+
+  <!-- This is where you want the routed component to be display when the link is clicked -->
+  <router-outlet></router-outlet>
+</div>

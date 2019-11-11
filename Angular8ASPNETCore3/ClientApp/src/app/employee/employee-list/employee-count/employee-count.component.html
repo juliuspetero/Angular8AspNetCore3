@@ -1,0 +1,12 @@
+<span class="radioclass">Show : </span>
+
+<!-- When the radio button is clicked, it sets the property and pass that property as the event payload
+    for the event emitter-->
+<input type="radio" name="options" value="All" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+<span class="radioclass">All({{all}})</span>
+
+<input type="radio" name="options" value="Male" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+<span class="radioclass">Male({{male}})</span>
+
+<input type="radio" name="options" value="Female" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()" />
+<span class="radioclass">Female({{female}})</span>

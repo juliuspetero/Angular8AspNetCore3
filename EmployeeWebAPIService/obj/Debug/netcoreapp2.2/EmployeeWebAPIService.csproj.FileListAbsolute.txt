@@ -1,0 +1,16 @@
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\appsettings.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\EmployeeWebAPIService.deps.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\EmployeeWebAPIService.runtimeconfig.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\EmployeeWebAPIService.runtimeconfig.dev.json
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\EmployeeWebAPIService.dll
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\bin\Debug\netcoreapp2.2\EmployeeWebAPIService.pdb
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.csprojAssemblyReference.cache
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.RazorAssemblyInfo.cache
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.RazorAssemblyInfo.cs
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.AssemblyInfoInputs.cache
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.AssemblyInfo.cs
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.RazorTargetAssemblyInfo.cache
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.dll
+E:\FrontEndProjects\AngularProject\EmployeeWebAPIService\obj\Debug\netcoreapp2.2\EmployeeWebAPIService.pdb

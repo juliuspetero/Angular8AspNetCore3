@@ -1,0 +1,11 @@
+table{
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  border-collapse: collapse;
+}
+
+td, th{
+  border: 1px solid #369;
+  padding: 5px;
+}
