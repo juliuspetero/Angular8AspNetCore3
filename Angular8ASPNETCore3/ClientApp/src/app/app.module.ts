@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {RouterModule, Routes } from '@angular/router';
 
 // Use for making Http request to Rest APIs
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -14,14 +13,13 @@ import { EmployeeCountComponent } from './employee/employee-list/employee-count/
 import { SimpleComponent } from './others/simple/simple.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './others/page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
 
-// More general routes should be at the bottom and more specific route should be at the top
-const appRoutes: Routes = [
-    { path: 'home', component: HomeComponent},
-    { path: 'employees', component: EmployeeListComponent},
-    { path: '', redirectTo: '/home', pathMatch: 'full'},
-    { path: '**', component: PageNotFoundComponent}
-];
+// Register employee service globally via dependency injection
+import { EmployeeService } from './employee/services/employee.service';
+//import { UserPreferencesService } from './employee/services/user-preferences.service';
+import { AppTestModule } from './app-test.module';
+
 
 @NgModule({
   declarations: [
@@ -38,9 +36,13 @@ const appRoutes: Routes = [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-      RouterModule.forRoot(appRoutes)
+    AppRoutingModule,
+
+    // You do not need to add the module from apptest in the providers for dependency injection
+    AppTestModule
   ],
-  providers: [],
+  // Register the service at this level and children with angular dependency injector
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

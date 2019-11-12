@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { IEmployee } from '../interfaces/employee';
 import { EmployeeService} from '../services/employee.service';
+import { UserPreferencesService } from '../services/user-preferences.service';
 
 
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
     styleUrls: ['./employee-list.component.css'],
-    // Register the service at this level and children with angular dependency injection system
-  providers: [EmployeeService]
+
+  // Register component level dependency here
+  providers: []
 })
 export class EmployeeListComponent implements OnInit {
     employees: IEmployee[];
@@ -18,22 +20,34 @@ export class EmployeeListComponent implements OnInit {
     // Status message with its default value
     statusMessage: string = "Loading data, please wait...";
 
-    // Dependency injection in TypeScript
-    constructor(private _employeeService: EmployeeService) {
-        
+    // Dependency injection in TypeScript, the constructor specifies that it has a dependency on Employee service
+    constructor(private _employeeService: EmployeeService, private _userPreferencesService: UserPreferencesService) {
+
+        // This create a local instance and cannot share state
+        //this._userPreferencesService = new UserPreferencesService();
+    }
+
+    // This is getter for the color to access the private field above
+    get color(): string {
+        return this._userPreferencesService.colorPreference;
+    }
+
+    // Set the private property 
+    set color(value: string) {
+        this._userPreferencesService.colorPreference = value;
     }
 
     ngOnInit() {
         // The callback function receives data from the observable
         this._employeeService.getEmployees()
             // Populate the employees with data receive from the obervable
-            .subscribe(employeeData => this.employees = employeeData,
-
-              // Handle the error which may ocurr during the http request
-             (error: Response) => {
-                 console.error(error);
-                 this.statusMessage = 'Problem with the service, please try again after sometime';
-             });
+            .then(employeeData => {
+                this.employees = employeeData
+            })
+            .catch(error => {
+                console.error(error);
+                this.statusMessage = 'Problem with the service, please try again after sometime';
+            });
     }
     
     // This method is called by the refresh button im the HTML
