@@ -14,11 +14,15 @@
   <ul class="nav nav-tabs">
     <li routerLinkActive="active">
       <!-- Binding to a static link -->
-      <a class="nav-link" routerLink="home">Home</a>
+      <a class="nav-link" [routerLink]="'/home'">Home</a>
     </li>
     <li routerLinkActive="active">
 
-      <a class="nav-link" routerLink="employees">Employees</a>
+      <a class="nav-link" [routerLink]="'/employees'">Employees Management</a>
+    </li>
+    <li routerLinkActive="active">
+
+      <a class="nav-link" [routerLink]="'/eventHub'">EventHub</a>
     </li>
   </ul>
   <br />

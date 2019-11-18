@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { enableProdMode } from '@angular/core';
+
 
 // Use for making Http request to Rest APIs
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -13,12 +15,17 @@ import { EmployeeCountComponent } from './employee/employee-list/employee-count/
 import { SimpleComponent } from './others/simple/simple.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './others/page-not-found/page-not-found.component';
-import { AppRoutingModule } from './app-routing.module';
 
+import { AppRoutingModule } from './app-routing.module';
 // Register employee service globally via dependency injection
 import { EmployeeService } from './employee/services/employee.service';
-//import { UserPreferencesService } from './employee/services/user-preferences.service';
-import { AppTestModule } from './app-test.module';
+import { EventHubModule } from './even-hub/event-hub.module';
+import { environment } from '../environments/environment';
+
+// To enable production mode
+if (environment.production) {
+    enableProdMode();
+}
 
 
 @NgModule({
@@ -37,9 +44,7 @@ import { AppTestModule } from './app-test.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-
-    // You do not need to add the module from apptest in the providers for dependency injection
-    AppTestModule
+    EventHubModule
   ],
   // Register the service at this level and children with angular dependency injector
   providers: [EmployeeService],

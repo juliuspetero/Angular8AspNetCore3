@@ -1,0 +1,24 @@
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded">
+      <div class="card-header">
+        <h3 class="mb-0">Login</h3>
+      </div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label>Email</label>
+            <!-- Two way data binding for input values -->
+            <input [(ngModel)]="loginUserData.email" type="text" name="email" class="form-control rounded-0" required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input [(ngModel)]="loginUserData.password" type="password" name="password" class="form-control rounded-0" required />
+          </div>
+          <!-- When the button is clicked, the user is registered because there data is already captured by the two way data binding -->
+          <button (click)="loginUser()" type="button" class="btn btn-success float-right">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
